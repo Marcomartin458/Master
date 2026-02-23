@@ -1,0 +1,70 @@
+/* Estilos generales básicos para limpiar la página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Una fuente clásica y segura */
+}
+
+/* El contenedor principal */
+.hero-clasico {
+    display: flex; /* Esto pone el texto y la foto en la misma línea */
+    align-items: center; /* Centra ambos elementos verticalmente */
+    justify-content: space-around; /* Reparte el espacio de forma equilibrada */
+    padding: 60px 20px;
+    background-color: #f4f6f9; /* Un gris muy, muy clarito y elegante */
+    min-height: 70vh; /* Altura generosa pero sin forzar toda la pantalla */
+}
+
+/* Estilos de la caja de texto */
+.hero-texto {
+    max-width: 500px; /* Evita que el texto se estire demasiado */
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    color: #2c3e50; /* Un azul marino oscuro, más elegante que el negro puro */
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Estilos del botón */
+.boton-simple {
+    display: inline-block;
+    background-color: #3498db; /* Azul clásico */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    font-weight: bold;
+}
+
+.boton-simple:hover {
+    background-color: #2980b9; /* Se oscurece un poco al pasar el ratón */
+}
+
+/* Estilos de la foto */
+.hero-imagen img {
+    width: 300px; /* Tamaño fijo para que no se descontrole */
+    height: 300px;
+    border-radius: 50%; /* El truco para hacer la foto un círculo perfecto */
+    object-fit: cover; /* Evita que la foto se aplaste o se estire si no es cuadrada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Una sombrita muy suave */
+}
+
+/* Adaptación básica para móviles */
+@media (max-width: 768px) {
+    .hero-clasico {
+        flex-direction: column-reverse; /* Pone el texto abajo y la foto arriba en móviles */
+        text-align: center; /* Centra el texto */
+    }
+    
+    .hero-imagen img {
+        margin-bottom: 30px; /* Separa la foto del texto en la vista móvil */
+    }
+}
