@@ -1,23 +1,54 @@
-/* Estilos generales básicos para limpiar la página */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* Una fuente clásica y segura */
+    font-family: Arial, sans-serif; 
 }
 
-/* El contenedor principal */
-.hero-clasico {
+header {
+    background-color: #2980b9; 
+    opacity: 0.7;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+
+    box-shadow: 
+        0px 10px 15px rgba(0, 0, 0, 0.05), /* Sombra grande y muy transparente */
+        0px 4px 6px rgba(0, 0, 0, 0.05);   /* Sombra pequeña y un pelín más marcada */
+    
+    /* Opcional: Si quieres que el header se quede fijo arriba al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    background-color: gray; 
+    opacity: 0.7;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    position: sticky;
+    top: 120px;
+    z-index: 999;
+    
+}
+.ElementoLista {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.hero {
     display: flex; /* Esto pone el texto y la foto en la misma línea */
     align-items: center; /* Centra ambos elementos verticalmente */
     justify-content: space-around; /* Reparte el espacio de forma equilibrada */
     padding: 60px 20px;
-    background-color: #f4f6f9; /* Un gris muy, muy clarito y elegante */
-    min-height: 70vh; /* Altura generosa pero sin forzar toda la pantalla */
+    background-color: #f4f6f9; 
+    min-height: 70vh; 
+    margin-bottom: 20px;
 }
 
-/* Estilos de la caja de texto */
-.hero-texto {
-    max-width: 500px; /* Evita que el texto se estire demasiado */
-}
 
 .hero-texto h1 {
     font-size: 3rem;
@@ -27,44 +58,31 @@ body {
 }
 
 .hero-texto p {
+    max-width: 500px;
     font-size: 1.2rem;
     color: #555555;
     margin-bottom: 30px;
     line-height: 1.5;
 }
 
-/* Estilos del botón */
-.boton-simple {
+.hero-boton {
     display: inline-block;
-    background-color: #3498db; /* Azul clásico */
+    margin-bottom: 20px;
+    background-color: #3498db;
     color: white;
     padding: 12px 25px;
-    text-decoration: none; /* Quita el subrayado del enlace */
-    border-radius: 5px; /* Bordes ligeramente redondeados */
+    border-radius: 5px; 
     font-weight: bold;
 }
 
-.boton-simple:hover {
-    background-color: #2980b9; /* Se oscurece un poco al pasar el ratón */
+.hero-boton:hover {
+    background-color: #2980b9;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de la foto */
 .hero-imagen img {
-    width: 300px; /* Tamaño fijo para que no se descontrole */
+    width: 300px;
     height: 300px;
-    border-radius: 50%; /* El truco para hacer la foto un círculo perfecto */
-    object-fit: cover; /* Evita que la foto se aplaste o se estire si no es cuadrada */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Una sombrita muy suave */
-}
-
-/* Adaptación básica para móviles */
-@media (max-width: 768px) {
-    .hero-clasico {
-        flex-direction: column-reverse; /* Pone el texto abajo y la foto arriba en móviles */
-        text-align: center; /* Centra el texto */
-    }
-    
-    .hero-imagen img {
-        margin-bottom: 30px; /* Separa la foto del texto en la vista móvil */
-    }
+    border-radius: 50%; 
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
