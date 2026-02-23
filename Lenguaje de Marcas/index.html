@@ -14,17 +14,17 @@
       <h1>Marco Martín Álvarez</h1>
     </header>
     <nav>
-      <ul>
-        <li><a href="#SobreMi" class="ElementoLista">Sobre Mí</a></li>
-        <li><a href="#Portfolio" class="ElementoLista">Portfolio</a></li>
-        <li><a href="#Contacto" class="ElementoLista">Contacto</a></li>
+      <ul class="nav-lista">
+        <li><a href="#sobremi" class="ElementoLista">Sobre Mí</a></li>
+        <li><a href="#portfolio" class="ElementoLista">Portfolio</a></li>
+        <li><a href="#contacto" class="ElementoLista">Contacto</a></li>
       </ul>
     </nav>
     <main>
       <section class="hero">
         <div class="hero-texto">
           <h1>De la sociología... <br> Al mundo de la programación</h1>
-          <a href="#Portfolio" class="hero-boton">Ver mi trabajo</a>
+          <a href="#portfolio" class="hero-boton">Ver mi trabajo</a>
         </div>
 
         <div class="hero-imagen">
@@ -34,56 +34,78 @@
           />
         </div>
       </section>
-      <section id="SobreMi">
+      <section id="sobremi" class="seccion-sobremi">
         <h2>SOBRE MÍ</h2>
-
+        <div class="tarjeta-sobremi">
         <p>
           En su tiempo me dediqué a la sociología pero con el tiempo descubrí que mi pasión estaba en la informatica
           . Ahora me dedico a ser estudiante de desarrollo
           de aplicaciones. Creando a
           través del código.
+        </div>
         </p>
       </section>
-      <section id="Portfolio">
-        <h2>PORTFOLIO</h2>
-       <article class="proyecto">
-        <h3>Proyecto 1: Sitio Web Personal</h3>
-        <p>
-          Creé un sitio web personal utilizando HTML, CSS y JavaScript para mostrar mi portfolio y habilidades. El sitio incluye una sección de proyectos, un blog y una página de contacto.
-        </p>
+   
+      <section id="portfolio" class="seccion-portfolio">
+    <h2>PORTFOLIO</h2>
+    
+    <div class="grid-proyectos">
+        
+        <a href="https://github.com/Marcomartin458/Master.git" target="_blank" class="enlace-card">
+            <article class="proyecto">
+                <img src="imágenes/githubimagen.jpg" alt="Repo Máster">
+                <div class="info-proyecto">
+                    <h3>Repo. Máster</h3>
+                    <p>Creé un repositorio en Github para ir mostrando mis avances en cuanto al Máster Prometeo que estoy cursando. En él se encontrarán los diferentes proyectos en los que estoy trabajando.</p>
+                </div>
+            </article>
+        </a>
 
-       </article class="proyecto">
-        <h3>Proyecto 2: Aplicación de Tareas</h3>
-        <p>
-          Desarrollé una aplicación de tareas utilizando React para ayudar a los usuarios a organizar sus actividades diarias. La aplicación permite crear, editar y eliminar tareas, así como marcar tareas como completadas.
-        </p>
-       <article class="proyecto">
-        <h3>Proyecto 3: Juego de Memoria</h3>
-        <p>
-          Programé un juego de memoria utilizando JavaScript puro. El juego consiste en encontrar pares de cartas iguales en el menor tiempo posible. Incluye diferentes niveles de dificultad y un sistema de puntuación.
-        </p>
-        
-       </article>
-       <article class="proyecto">
-        <h3>Proyecto 4: Blog Personal</h3>
-        <p>
-          Creé un blog personal utilizando WordPress para compartir mis pensamientos y experiencias sobre el desarrollo web. El blog incluye categorías, etiquetas y un sistema de comentarios para fomentar la interacción con los lectores.
-        </p>
-        
-       </article>
-      </section>
+        <a href="https://github.com/WilliamsPrometeo/programacion.git" target="_blank" class="enlace-card">
+            <article class="proyecto">
+                <img src="imágenes/java.jpg" alt="Repo Programación">
+                <div class="info-proyecto">
+                    <h3>Repo. Java</h3>
+                    <p>Este es un repositorio de mi profesor de programacion. En él se podrán encontrar los proyectos y las teorías que damos en clase.</p>
+                </div>
+            </article>
+        </a>
+
+        <a href="https://github.com/Marcomartin458/DAM_entregas" target="_blank" class="enlace-card">
+            <article class="proyecto">
+                <img src="imágenes/proyecto.png" alt="Juego de Memoria">
+                <div class="info-proyecto">
+                    <h3>Repo. Entregas</h3>
+                    <p>Programé un juego de memoria utilizando JavaScript puro. El juego consiste en encontrar pares de cartas iguales en el menor tiempo posible. Incluye diferentes niveles y puntuación.</p>
+                </div>
+            </article>
+        </a>
+
+        <a href="https://github.com/TU-USUARIO/repo4" target="_blank" class="enlace-card">
+            <article class="proyecto">
+                <img src="foto-proyecto4.jpg" alt="Blog Personal">
+                <div class="info-proyecto">
+                    <h3>Blog Personal</h3>
+                    <p>Creé un blog personal utilizando WordPress para compartir mis pensamientos sobre el desarrollo web. Incluye categorías, etiquetas y un sistema de comentarios.</p>
+                </div>
+            </article>
+        </a>
+
+    </div>
+</section>
+
       <section id="contacto" class="seccion-contacto">
         <h2>CONTACTO</h2>
-        <form action="#" method="POST" class="formulario">
+        <form class="formulario">
         
         <div class="grupo-input">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required placeholder="Tu nombre">
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
         </div>
         
         <div class="grupo-input">
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email"  required placeholder="tu@email.com">
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
         </div>
         
         <div class="grupo-input">
