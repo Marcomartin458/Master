@@ -5,54 +5,49 @@ body {
 }
 
 header {
-    background-color: #2980b9; 
-    opacity: 0.7;
+    background-color: #297fb9dc; 
+    opacity: 0.95;
     color: whitesmoke;
     padding: 20px;
     text-align: center;
     border-radius: 10px 10px 0 0;
-
     box-shadow: 
-        0px 10px 15px rgba(0, 0, 0, 0.05), /* Sombra grande y muy transparente */
-        0px 4px 6px rgba(0, 0, 0, 0.05);   /* Sombra pequeña y un pelín más marcada */
-    
-    /* Opcional: Si quieres que el header se quede fijo arriba al hacer scroll */
+        0px 10px 15px rgba(0, 0, 0, 0.05), 
+        0px 4px 6px rgba(0, 0, 0, 0.05);  
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 nav {
+    display: flex;
     background-color: gray; 
-    opacity: 0.7;
+    opacity: 0.5;
     padding: 10px;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
-    position: sticky;
-    top: 120px;
-    z-index: 999;
-    
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .ElementoLista {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 10px;
     font-weight: bold;
 }
 .hero {
-    display: flex; /* Esto pone el texto y la foto en la misma línea */
-    align-items: center; /* Centra ambos elementos verticalmente */
-    justify-content: space-around; /* Reparte el espacio de forma equilibrada */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
     padding: 60px 20px;
     background-color: #f4f6f9; 
     min-height: 70vh; 
     margin-bottom: 20px;
 }
 
-
 .hero-texto h1 {
     font-size: 3rem;
-    color: #2c3e50; /* Un azul marino oscuro, más elegante que el negro puro */
+    color: #2c3e50; 
     margin-bottom: 15px;
     margin-top: 0;
 }
@@ -85,4 +80,74 @@ nav {
     height: 300px;
     border-radius: 50%; 
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+/* Centramos toda la sección */
+.seccion-contacto {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column; /* Pone el título arriba y el formulario abajo */
+    align-items: center;
+}
+
+.seccion-contacto h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+
+.formulario {
+    width: 100%;
+    max-width: 500px; 
+    background-color: #f4f6f9; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); 
+}
+.grupo-input {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif; 
+    transition:  0.3s ease; 
+}
+
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    outline: none; 
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2); 
+}
+
+
+.btn-enviar {
+    width: 100%; 
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #2980b9;
 }
