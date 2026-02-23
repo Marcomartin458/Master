@@ -81,11 +81,11 @@ nav {
     border-radius: 50%; 
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
-/* Centramos toda la sección */
+
 .seccion-contacto {
     padding: 60px 20px;
     display: flex;
-    flex-direction: column; /* Pone el título arriba y el formulario abajo */
+    flex-direction: column; 
     align-items: center;
 }
 
