@@ -1,16 +1,29 @@
+/* ESTILO DE MI PAGINA */
+:root {
+    --color-primario: #3498db;          
+    --color-primario-hover: #2980b9;    
+    --color-cabecera: #297fb9dc;        
+    --color-titulos: #2c3e50;           
+    --color-textos: #555555;            
+    --bg-body: #dcecf70a;               
+    --bg-secciones: #f4f6f9;           
+    --blanco: #ffffff;
+    --fuente-principal: Arial, sans-serif;
+}
+/* RESET */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+/* BODY */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif; 
-    background-color: #dcecf70a;
+   font-family: var(--fuente-principal);
+    background-color: var(--bg-body);
 }
-
+/* HEADER */
 header {
-    background-color: #297fb9dc; 
+    background-color: var(--color-cabecera);
     opacity: 0.95;
     color: whitesmoke;
     padding: 20px;
@@ -23,12 +36,13 @@ header {
     top: 0;
     z-index: 1000;
 }
+/* NAV */
 nav {
     display: flex;
     background-color: gray; 
     opacity: 0.5;
     padding: 10px;
-    color: white;
+    color: var(--blanco);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
     flex-direction: row;
@@ -46,18 +60,19 @@ nav {
     
 }
 .ElementoLista {
-    color: white;
+    color: var(--blanco);
     margin: 10px;
     font-weight: bold;
     text-decoration: none;
     padding: 8px 15px;
 }
+/* SECCION HERO */
 .hero {
     display: flex; 
     align-items: center; 
     justify-content: space-around; 
     padding: 60px 20px;
-    background-color: #f4f6f9; 
+    background-color:var(--bg-secciones); 
     min-height: 70vh; 
     margin-bottom: 20px;
     border-radius: 0 0 10px 10px;
@@ -66,7 +81,7 @@ nav {
 
 .hero-texto h1 {
     font-size: 3rem;
-    color: #2c3e50; 
+    color: var(--color-titulos); 
     margin-bottom: 15px;
     margin-top: 0;
 }
@@ -74,7 +89,7 @@ nav {
 .hero-texto p {
     max-width: 500px;
     font-size: 1.2rem;
-    color: #555555;
+    color: var(--color-textos);
     margin-bottom: 30px;
     line-height: 1.5;
 }
@@ -82,8 +97,8 @@ nav {
 .hero-boton {
     display: inline-block;
     margin-bottom: 20px;
-    background-color: #3498db;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--blanco);
     padding: 12px 25px;
     border-radius: 5px; 
     font-weight: bold;
@@ -91,7 +106,7 @@ nav {
 }
 
 .hero-boton:hover {
-    background-color: #2980b9;
+    background-color: var(--color-primario-hover);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,7 +116,107 @@ nav {
     border-radius: 50%; 
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
+/* SECCION SOBRE MI */
+.seccion-sobremi {
+    padding: 50px 20px;
+    text-align: center;
+}
 
+.seccion-sobremi h2{
+     font-size: 2.5rem;
+    color: var(--color-titulos);
+    margin-bottom: 30px;
+}
+
+.seccion-sobremi p{
+    margin: 0; 
+    color: var(--color-textos);
+    line-height: 1.5;
+
+}
+.tarjeta-sobremi {
+    background-color: var(--bg-secciones);
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* SECCION PORTFOLIO */
+
+.seccion-portfolio h2 {
+    font-size: 2.5rem;
+    color: var(--color-titulos);
+    margin-bottom: 30px;
+}
+
+.seccion-portfolio {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr); 
+    gap: 25px; 
+    margin-top: 30px;
+    align-items: start;
+    justify-content: center;
+}
+
+.enlace-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.proyecto {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    max-width: 350px;
+    height: 100%;
+}
+
+.proyecto img {
+    width: 100%;
+    height: 180px; 
+}
+
+.info-proyecto {
+    padding: 20px;
+    text-align: center; 
+}
+
+.info-proyecto h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-titulos);
+}
+
+.info-proyecto p {
+    margin: 0; 
+    max-height: 0;
+    opacity: 0; 
+    overflow: hidden;
+    color: var(--color-textos);
+    line-height: 1.5;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.proyecto:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); 
+}
+
+.proyecto:hover .info-proyecto p {
+    max-height: 250px; 
+    opacity: 1; 
+    margin-top: 15px; 
+}
+/* SECCION CONTACTO */
 .seccion-contacto {
     padding: 60px 20px;
     display: flex;
@@ -111,14 +226,14 @@ nav {
 
 .seccion-contacto h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--color-titulos);
     margin-bottom: 30px;
 }
 
 .formulario {
     width: 100%;
     max-width: 500px; 
-    background-color: #f4f6f9; 
+    background-color: var(--bg-secciones); 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); 
@@ -142,7 +257,7 @@ nav {
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 1rem;
-    font-family: Arial, sans-serif; 
+    font-family: var(--fuente-principal); 
     transition:  0.3s ease; 
 }
 
@@ -150,7 +265,7 @@ nav {
 .grupo-input input:focus,
 .grupo-input textarea:focus {
     outline: none; 
-    border-color: #3498db;
+    border-color: var(--color-primario);
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.2); 
 }
 
@@ -158,8 +273,8 @@ nav {
 .btn-enviar {
     width: 100%; 
     padding: 15px;
-    background-color: #3498db;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--blanco);
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -169,106 +284,12 @@ nav {
 }
 
 .btn-enviar:hover {
-    background-color: #2980b9;
+    background-color: var(--color-primario-hover);
 }
 
-.seccion-sobremi {
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.seccion-sobremi h2{
-     font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.seccion-sobremi p{
-    margin: 0; 
-    color: #555;
-    line-height: 1.5;
-
-}
-.tarjeta-sobremi {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-.seccion-portfolio h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.seccion-portfolio {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.grid-proyectos {
-    display: grid;
-    grid-template-columns:repeat(4, 1fr); 
-    gap: 25px; 
-    margin-top: 30px;
-    align-items: start;
-    justify-content: center;
-}
-
-.enlace-card {
-    text-decoration: none;
-    color: inherit;
-}
-
-.proyecto {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-    max-width: 350px;
-    height: 100%;
-}
-
-.proyecto img {
-    width: 100%;
-    height: 180px; 
-}
-
-.info-proyecto {
-    padding: 20px;
-    text-align: center; 
-}
-
-.info-proyecto h3 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: #2c3e50;
-}
-
-.info-proyecto p {
-    margin: 0; 
-    max-height: 0;
-    opacity: 0; 
-    overflow: hidden;
-    color: #555;
-    line-height: 1.5;
-    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
-}
-
-.proyecto:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); 
-}
-
-.proyecto:hover .info-proyecto p {
-    max-height: 250px; 
-    opacity: 1; 
-    margin-top: 15px; 
-}
 .footer {
-    background-color: #297fb9dc; 
+    background-color: var(--color-cabecera); 
     opacity: 0.95;
     color: whitesmoke;
     padding: 20px;
@@ -279,7 +300,7 @@ nav {
 }
 
 .social a{
-    color: white;
+    color: var(--blanco);
     margin: 10px;
     text-decoration: none;
     padding: 8px 15px;
@@ -287,7 +308,7 @@ nav {
 
 @media (max-width: 1024px) {
     .grid-proyectos {
-        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en tablets */
+        grid-template-columns: repeat(2, 1fr); 
     }
     .hero {
         flex-direction: column-reverse; 
@@ -304,10 +325,9 @@ nav {
 
 @media (max-width: 600px) {
     .grid-proyectos {
-        grid-template-columns: 1fr; /* 1 tarjeta por fila en móviles */
+        grid-template-columns: 1fr; 
     }
     
-    /* En móviles no hay ratón para hacer "hover", así que mostramos el texto siempre */
     .info-proyecto p {
         max-height: none;
         opacity: 1;
