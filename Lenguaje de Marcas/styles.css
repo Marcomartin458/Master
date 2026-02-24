@@ -164,7 +164,7 @@ nav {
     justify-content: center;
 }
 
-.enlace-card {
+.enlace-tarjeta {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -240,20 +240,20 @@ nav {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); 
 }
 
-.grupo-input {
+.contacto-input {
     display: flex;
     flex-direction: column; 
     margin-bottom: 20px;
 }
 
-.grupo-input label {
+.contacto-input label {
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
 }
 
-.grupo-input input,
-.grupo-input textarea {
+.contacto-input input,
+.contacto-input textarea {
     padding: 12px;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -263,8 +263,8 @@ nav {
 }
 
 
-.grupo-input input:focus,
-.grupo-input textarea:focus {
+.contacto-input input:focus,
+.contacto-input textarea:focus {
     outline: none; 
     border-color: var(--color-primario);
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.2); 
