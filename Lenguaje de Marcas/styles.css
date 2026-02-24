@@ -260,6 +260,16 @@ nav {
     opacity: 1; 
     margin-top: 15px; 
 }
+footer {
+    background-color: #297fb9dc; 
+    opacity: 0.95;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
 
 /* --- 4. RESPONSIVE (Para móviles y tablets) --- */
 @media (max-width: 1024px) {
