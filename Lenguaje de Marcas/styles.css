@@ -205,10 +205,11 @@ nav {
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns:repeat(4, 1fr); 
     gap: 25px; 
     margin-top: 30px;
     align-items: start;
+    justify-content: center;
 }
 
 .enlace-card {
@@ -222,6 +223,8 @@ nav {
     overflow: hidden; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    max-width: 350px;
     height: 100%;
 }
 
@@ -271,10 +274,20 @@ footer {
     margin-top: 40px;
 }
 
-/* --- 4. RESPONSIVE (Para móviles y tablets) --- */
 @media (max-width: 1024px) {
     .grid-proyectos {
         grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en tablets */
+    }
+    .hero {
+        flex-direction: column-reverse; 
+        text-align: center; 
+        padding: 40px 20px;
+    }
+
+    .hero-imagen img {
+        width: 300px; 
+        height: 300px;
+        margin-bottom: 25px;
     }
 }
 
