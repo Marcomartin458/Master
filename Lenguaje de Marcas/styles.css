@@ -36,6 +36,10 @@ header {
     top: 0;
     z-index: 1000;
 }
+header .logo {
+    width: 300px;
+    height: auto;
+}
 /* NAV */
 nav {
     display: flex;
@@ -312,6 +316,11 @@ nav {
     .grid-proyectos {
         grid-template-columns: repeat(2, 1fr); 
     }
+    header {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 20px;
+    }
     .hero {
         flex-direction: column-reverse; 
         text-align: center; 
@@ -328,6 +337,11 @@ nav {
 @media (max-width: 600px) {
     .grid-proyectos {
         grid-template-columns: 1fr; 
+    }
+    header {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 20px;
     }
     
     .info-proyecto p {
