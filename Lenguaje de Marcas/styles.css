@@ -19,7 +19,7 @@
 /* BODY */
 body {
    font-family: var(--fuente-principal);
-    background-color: var(--bg-body);
+   background-color: var(--bg-body);
 }
 /* HEADER */
 header {
